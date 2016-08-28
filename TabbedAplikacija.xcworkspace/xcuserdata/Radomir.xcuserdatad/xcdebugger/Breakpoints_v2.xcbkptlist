@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KontaktViewController.swift"
+            timestampString = "492185266.541196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "KontaktViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KontaktViewController.swift"
+            timestampString = "492184490.265832"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "KontaktViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.destinations.getter : Swift.Array&lt;TabbedAplikacija.Destinacija&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.725235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TabbedAplikacija.KontaktViewController"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.725371"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TabbedAplikacija.KontaktViewController&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.725461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KontaktViewController.swift"
+            timestampString = "492185469.811924"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "KontaktViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.currentDestination.getter : Swift.Optional&lt;TabbedAplikacija.Destinacija&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.840824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.currentDestination.setter : Swift.Optional&lt;TabbedAplikacija.Destinacija&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.840974"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TabbedAplikacija.KontaktViewController"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.84107"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TabbedAplikacija.KontaktViewController&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktViewController.swift"
+                  timestampString = "492185469.841166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KontaktViewController.swift"
+            timestampString = "492186863.653745"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KontaktGlavniViewController.swift"
+            timestampString = "492560344.1933"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "posaljiMejl(_:titl:messageBody:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KontaktGlavniViewController.swift"
+            timestampString = "492256927.040766"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "KontaktGlavniViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktGlavniViewController.label.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktGlavniViewController.swift"
+                  timestampString = "492256927.993779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktGlavniViewController.label.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktGlavniViewController.swift"
+                  timestampString = "492256927.994074"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktGlavniViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; TabbedAplikacija.KontaktGlavniViewController"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktGlavniViewController.swift"
+                  timestampString = "492256927.994211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TabbedAplikacija.KontaktGlavniViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TabbedAplikacija.KontaktGlavniViewController&gt;"
+                  moduleName = "TabbedAplikacija"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Radomir/Documents/TabbedAplikacija/KontaktGlavniViewController.swift"
+                  timestampString = "492256927.994372"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TabbedAplikacija/OstaviKomentarViewController.swift"
+            timestampString = "492299799.769223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ostaviKomentar(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySqlKlasa.swift"
+            timestampString = "494095056.989612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "insert(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MySqlKlasa.swift"
+            timestampString = "494110711.341474"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "get(_:whereUslov:limit:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
