@@ -36,7 +36,7 @@ class ZabavaViewController: UIViewController {
             let dateFormater = NSDateFormatter()
             dateFormater.dateFormat = "dd. MM. yyyy."
             dateFormater.locale = NSLocale(localeIdentifier: "sr_Latn")
-            dateFormater.dateStyle = NSDateFormatterStyle.ShortStyle
+            dateFormater.dateStyle = NSDateFormatterStyle.MediumStyle
             var danas:String = dateFormater.stringFromDate(NSDate())
             
             switch self.segmentLabelHoroskop.selectedSegmentIndex {
@@ -107,9 +107,9 @@ class ZabavaViewController: UIViewController {
     @IBAction func promena(sender: AnyObject) {
         
         let dateFormater = NSDateFormatter()
-        dateFormater.dateFormat = "dd. MM. yyyy."
+        dateFormater.dateFormat = "dd.MM.yyyy."
         dateFormater.locale = NSLocale(localeIdentifier: "sr_Latn")
-        dateFormater.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormater.dateStyle = NSDateFormatterStyle.MediumStyle
         var danas:String = dateFormater.stringFromDate(NSDate())
 
         if(self.segmentLabel.selectedSegmentIndex==0){
@@ -187,6 +187,7 @@ class ZabavaViewController: UIViewController {
             self.prognozaLabel.hidden = true
             self.znakLabel.hidden = true
             
+            
             let youtubeURL = "https://www.youtube.com/embed/65rQw_f9gBM"
             webView.allowsInlineMediaPlayback=true
             let text:String = "<iframe width=\"\(webView.frame.width)\" height=\"\(webView.frame.height)\" src=\"\(youtubeURL)\" frameborder=\"0\" allowfullscreen></iframe>"
@@ -201,6 +202,11 @@ class ZabavaViewController: UIViewController {
         
         if(self.segmentLabel.selectedSegmentIndex==2){
             self.imageViewHoroskop.hidden = true
+            self.segmentLabelHoroskop.hidden = true
+            self.datumLabel.hidden = true
+            self.prognozaLabel.hidden = true
+            self.znakLabel.hidden = true
+            
             self.webView.hidden = false
             
             
@@ -217,16 +223,32 @@ class ZabavaViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
         override func viewDidLoad() {
         super.viewDidLoad()
+            
                        // prevedi("")
+             var imageHor: UIImage = UIImage(named: "ikonice/horoskop.png")!
+            imageViewHoroskop.image = imageHor
         horoskopi = vratiHoroskope()
             self.webView.hidden = true
             
             let dateFormater = NSDateFormatter()
-            dateFormater.dateFormat = "dd. MM. yyyy."
+            dateFormater.dateFormat = "dd.MM.yyyy."
             dateFormater.locale = NSLocale(localeIdentifier: "sr_Latn")
-            dateFormater.dateStyle = NSDateFormatterStyle.ShortStyle
+            dateFormater.dateStyle = NSDateFormatterStyle.MediumStyle
             var danas:String = dateFormater.stringFromDate(NSDate())
 
+            if !SqlKlasa.daLiImaKonekcije() {
+                let Alert = UIAlertController(title: "Info", message: "Molimo konektujte se na internet", preferredStyle: .Alert)
+                
+                let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                    
+                    (alert: UIAlertAction!) -> Void in
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+                
+                Alert.addAction(DismissButton)
+                
+                self.presentViewController(Alert, animated: true, completion: nil)
+            }
             
             self.datumLabel.text = danas
             self.prognozaLabel.text=self.horoskopi["aries"]
@@ -258,6 +280,8 @@ class ZabavaViewController: UIViewController {
     func vratiHoroskope() -> [String:String] {
         var horoskopi = [String:String]()
         
+                var datum:String = String(NSDate()).characters.split{$0 == " "}.map(String.init)[0].stringByReplacingOccurrencesOfString("2016", withString: "2010")
+        
         var nizHoroskopa:[String] = []
         nizHoroskopa.append("aquarius")
         nizHoroskopa.append("libra")
@@ -272,10 +296,16 @@ class ZabavaViewController: UIViewController {
         nizHoroskopa.append("cancer")
         nizHoroskopa.append("scorpio")
         
-        let datum:String = String(NSDate()).characters.split{$0 == " "}.map(String.init)[0].stringByReplacingOccurrencesOfString("2016", withString: "2010")
+
+        
+        datum = "2010-08-24"
+        //print("datum je :\(datum)")
         
         for index in 0...11{
         var url = NSURL(string: "http://widgets.fabulously40.com/horoscope.json?sign=\(nizHoroskopa[index])&date=\(datum)")
+            
+            
+            
         var jsonData = NSData(contentsOfURL: url!)
             
         

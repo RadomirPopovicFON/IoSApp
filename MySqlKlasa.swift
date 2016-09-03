@@ -17,8 +17,7 @@ class MySqlKlasa {
 //        $brojLajkova = $_POST['brojLajkova'];
 //        $brojDislajkova = $_POST['brojDislajkova'];
 //        $VestID = $_POST['VestID'];
-//        
-        //let request = NSMutableURLRequest(URL: NSURL(string: "http://localhost:8888/swift/post.php")!)//localhost
+
         
         
         let request = NSMutableURLRequest(URL: NSURL(string: "http://multiplaskleroza.org.rs/postMobRacunarstvo.php")!)
@@ -49,7 +48,7 @@ class MySqlKlasa {
     static func get(tabela:String,whereUslov:String="",limit:String="") -> [Tabela]{
         
         var instance:[Tabela]=[]
-        print("where uslov: \(whereUslov)")
+        //print("where uslov: \(whereUslov)")
         var upit:String = "http://multiplaskleroza.org.rs/selectMobRacunarstvo.php?tabela="+tabela
         
         if whereUslov != ""{
@@ -65,18 +64,14 @@ class MySqlKlasa {
             upit+="&limit=\(limit)"
         }
         
-        print("Upit glasi: "+upit)
-        print("________")
+//        print("Upit glasi: "+upit)
+//        print("_________________________")
         let url = NSURL(string: upit)
         let data = NSData(contentsOfURL: url!)
         
         
         //AKO NEMA INTERNETA
         if data==nil {return [];}
-        
-        
-        //AKO JE PRAZNO
-        
         
         
         
@@ -211,7 +206,7 @@ class MySqlKlasa {
             
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
-            print("Upit glasi: \(responseString)")
+            print("Upit web servisa glasi: \(responseString)")
         }
         task.resume()
     }

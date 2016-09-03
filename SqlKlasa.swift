@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SystemConfiguration
 
 
 extension NSDate
@@ -25,6 +26,7 @@ extension NSDate
 
 class SqlKlasa {
     
+    
     static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
     static let url = DocumentsDirectory.URLByAppendingPathComponent("tabbedAplikacija")
     
@@ -32,14 +34,53 @@ class SqlKlasa {
         print("\(DocumentsDirectory)")
         return ("\(DocumentsDirectory)")
     }
-//    static func napraviTabelu(){
-//        
-//        let dbCommandKreiraj : String = "CREATE TABLE Plivaci(ID INT PRIMARY KEY NOT NULL, Ime VARCHAR(50), Zemlja VARCHAR(50));"
-//        let dbCommandUpisi : String = "INSERT INTO Plivaci VALUES (1,'Milorad','Srbija')"
-//        
-//        
-//        //izvrsiUpit(dbCommandUpdate)
-//    }
+    static func napraviTabelu(){
+        
+
+
+         let dbCommandKreiraj1 : String = "CREATE TABLE `Kategorija` (`idKategorija` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,`nazivKategorije` varchar(50) NOT NULL,`nazivPodkategorije` varchar(50) NOT NULL);"
+        let dbCommandKreiraj2 : String = "CREATE TABLE `Vest` (`idVest` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,`naslov` varchar(100) NOT NULL,`text` varchar(1200) NOT NULL,`datumPostavljanja` date NOT NULL,`slikaNaServeru` varchar(100) NOT NULL,`idKategorije` int(50) NOT NULL,FOREIGN KEY (`idKategorije`) REFERENCES `Kategorija` (`idKategorija`))";
+        let dbCommandKreiraj3 : String = "CREATE TABLE `Komentar` (`idKomentar` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,`nazivOsobe` varchar(50) NOT NULL,`komentar` varchar(200) NOT NULL,`brojLajkova` int(50) NOT NULL,`brojDislajkova` int(50) NOT NULL,`VestID` int(50) NOT NULL,FOREIGN KEY (`VestID`) REFERENCES `Vest` (`idVest`))";
+        
+        izvrsiUpit(dbCommandKreiraj1)
+        izvrsiUpit(dbCommandKreiraj2)
+        izvrsiUpit(dbCommandKreiraj3)
+
+        
+        
+        let dbCommandInsertKategorija1 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (1,'Glavna','Svet');";
+        let dbCommandInsertKategorija2 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (2,'Glavna','Politika');";
+        let dbCommandInsertKategorija3 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (3,'Glavna','Kultura');"
+        let dbCommandInsertKategorija4 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (4,'Glavna','IT');";
+        let dbCommandInsertKategorija5 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (5,'Sport','Kosarka');";
+        let dbCommandInsertKategorija6 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (6,'Sport','Fudbal');"
+        let dbCommandInsertKategorija7 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (7,'Sport','Odbojka');"
+        let dbCommandInsertKategorija8 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (8,'Sport','Rukomet');"
+        let dbCommandInsertKategorija9 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (9,'Sport','Vaterpolo');"
+        let dbCommandInsertKategorija10 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (10,'Sport','Tenis');"
+        let dbCommandInsertKategorija11 : String = "INSERT INTO Kategorija('idKategorija','nazivKategorije','nazivPodkategorije') VALUES (11,'Sport','Ostalo');"
+        
+         izvrsiUpit(dbCommandInsertKategorija1);
+         izvrsiUpit(dbCommandInsertKategorija2);
+         izvrsiUpit(dbCommandInsertKategorija3);
+         izvrsiUpit(dbCommandInsertKategorija4);
+         izvrsiUpit(dbCommandInsertKategorija5);
+         izvrsiUpit(dbCommandInsertKategorija6);
+         izvrsiUpit(dbCommandInsertKategorija7);
+         izvrsiUpit(dbCommandInsertKategorija8);
+         izvrsiUpit(dbCommandInsertKategorija9);
+         izvrsiUpit(dbCommandInsertKategorija10);
+         izvrsiUpit(dbCommandInsertKategorija11);
+        
+         var info: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+         info.setObject("OK", forKey: "Baza")
+         info.synchronize()
+        
+//        izvrsiUpit(dbCommandInsertKategorija2);izvrsiUpit(dbCommandInsertKategorija3);izvrsiUpit(dbCommandInsertKategorija4);izvrsiUpit(dbCommandInsertKategorija5);izvrsiUpit(dbCommandInsertKategorija6);izvrsiUpit(dbCommandInsertKategorija7);izvrsiUpit(dbCommandInsertKategorija8);izvrsiUpit(dbCommandInsertKategorija9);izvrsiUpit(dbCommandInsertKategorija10);
+        
+        
+    
+    }
     
     static func stampajNiz2d(rows: [[String]])
     {
@@ -68,10 +109,10 @@ class SqlKlasa {
         
         var upit:String = "SELECT * FROM "+tabela
         if whereUslov != "" {upit+=" WHERE "+whereUslov}
-        print("Upit je:")
-        print(upit)
-        print("Tabela je:")
-        print(tabela)
+//        print("Upit je:")
+//        print(upit)
+//        print("Tabela je:")
+//        print(tabela)
         
         if sqlite3_prepare_v2(db, upit, -1, &getStatement, nil) == SQLITE_OK{
             
@@ -89,7 +130,7 @@ class SqlKlasa {
                 
             }
             }
-            print("Radi li "+tabela.characters.split(" ").map(String.init)[0])
+            //print("Radi li "+tabela.characters.split(" ").map(String.init)[0])
             
             if tabela == "Komentar INNER JOIN Vest ON Komentar.VestID = Vest.idVest INNER JOIN Kategorija ON Vest.idVest = Kategorija.idKategorija;" || tabela=="Komentar INNER JOIN Vest ON Komentar.VestID = Vest.idVest INNER JOIN Kategorija ON Vest.idVest = Kategorija.idKategorija"{
                 while sqlite3_step(getStatement) == SQLITE_ROW{
@@ -138,9 +179,7 @@ class SqlKlasa {
             tabela == "Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija" 
             {
                 while sqlite3_step(getStatement) == SQLITE_ROW{
-                    
-                    
-                    
+                                        
                     let nizRed: [String] = []
                     
                     let idVest = Int(sqlite3_column_int(getStatement, 0))
@@ -176,7 +215,7 @@ class SqlKlasa {
             
             
         }
-        else { print("bag prepare") }
+        else { print("bag prepare"); print("Upit: \(upit)") }
         sqlite3_finalize(getStatement)
         sqlite3_close(db)
         
@@ -188,32 +227,37 @@ class SqlKlasa {
     
     static func otvoriBazu() -> COpaquePointer{
         var db:COpaquePointer = nil
-        if sqlite3_open(url.absoluteString,&db) == SQLITE_OK{}
+        if sqlite3_open(url.absoluteString,&db) == SQLITE_OK{
+            
+            //print("Uspesno otvorio bazu: \(url.absoluteString)")
+            
+        }
         else { print("Unable to open database" )}
         return db
     }
-    static func sacuvajUBazi(vest:Vest){
-        
-
-        
-        
-        
-        
-        
+    
+    static func daLiPostojiBaza() -> Bool {
+        var db:COpaquePointer = nil
+        if sqlite3_open(url.absoluteString,&db) == SQLITE_OK{
+            
+            return true
+        }
+        return false
     }
     static func izvrsiUpit(upit:String){
         var upitStatement: COpaquePointer = nil
         let db: COpaquePointer = SqlKlasa.otvoriBazu()
         
-        print("Upit glasi: \(upit)")
+        //print("Upit glasi: \(upit)")
         if sqlite3_prepare_v2(db, upit, -1, &upitStatement, nil) == SQLITE_OK {
             
             if sqlite3_step(upitStatement) == SQLITE_DONE{
-                
+                print("Upit izvrsen: \(upit)")
             }
             else {
-                print("Nije mogao izvrsiti upit \(upit)), prepare:\(sqlite3_prepare_v2(db, upit, -1, &upitStatement, nil)), step: \(sqlite3_step(upitStatement))")
-                
+                //print("Nije mogao izvrsiti upit \(upit)), prepare:\(sqlite3_prepare_v2(db, upit, -1, &upitStatement, nil)), step: \(sqlite3_step(upitStatement))")
+                //print("Vest postoji vec u bazi telefona :)")
+                print("Upit nije izvrsen - verovatno se ubacuje vest koja vec postoji")
             }
             
         }
@@ -238,6 +282,25 @@ class SqlKlasa {
         let upit:String="INSERT INTO `Vest`(`idVest`, `naslov`, `text`, `datumPostavljanja`, `slikaNaServeru`, `idKategorije`) VALUES (\(vest.id),'\(vest.naslov)','\(vest.text)','\(vest.datumPostavljanja)','\(vest.slika)',\(vest.kategorija.id))"
         izvrsiUpit(upit)
         }
+        
+    }
+    
+    static func daLiImaKonekcije() -> Bool {
+        
+            var zeroAddress = sockaddr_in()
+            zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+            zeroAddress.sin_family = sa_family_t(AF_INET)
+            let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
+            }
+            var flags = SCNetworkReachabilityFlags()
+            if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+                return false
+            }
+            let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+            let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+            return (isReachable && !needsConnection)
+        
         
     }
     
@@ -298,7 +361,7 @@ class SqlKlasa {
                 }
                 
             } catch {
-                print("bad things happened")
+                print("ipak ne")
             }
         }).resume()
         
@@ -306,13 +369,19 @@ class SqlKlasa {
     static func inicijalizujNSUSERDEF(ipAdresa:String){
         
         var info: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let adresa:String? = String(info.objectForKey("ip")!)
         
         
-        if !(adresa!.isEmpty){
+        if let key = NSUserDefaults.standardUserDefaults().objectForKey("ip"){
+            print("Nije nul1")
             return;
         }
         
+        
+        print("Null je ")
+        print("breakpoint2");
+        
+        
+        //let adresa:String? = String(info.objectForKey("ip")!)
         
         
         

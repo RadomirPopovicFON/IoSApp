@@ -34,7 +34,8 @@ class KontaktGlavniViewController: UIViewController,MFMailComposeViewControllerD
     @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!)
+        
+         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "ikonice/kontaktBack.jpg")!)
         //fejsbuk()
         //poruka("+38163481691", tekst: "tekst")
         // Do any additional setup after loading the view.
@@ -51,15 +52,17 @@ class KontaktGlavniViewController: UIViewController,MFMailComposeViewControllerD
     func fejsbuk(){
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             
-            let FacebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            var FacebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             
-            FacebookSheet.setInitialText("BLIC VESTI")
+            FacebookSheet.setInitialText("Vesti su sjajne")
+            
+            
             
             self.presentViewController(FacebookSheet, animated: true, completion: nil)
             
         } else {
             
-            let Alert = UIAlertController(title: "Accounts", message: "Please log in to your facebook accounts in the settings", preferredStyle: UIAlertControllerStyle.Alert)
+            let Alert = UIAlertController(title: "Accounts", message: "Molimo logujte se na fejsbuk.", preferredStyle: UIAlertControllerStyle.Alert)
             
             Alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             

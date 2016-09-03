@@ -61,19 +61,34 @@ class VremeViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "ikonice/horoskopBack.jpg")!)
         pickerView.delegate = self
         pickerView.dataSource = self
         
         
         gradovi = nadjiVreme()
+        
+        if gradovi.count == 0 {
+            let Alert = UIAlertController(title: "Info", message: "Molimo konektujte se na internet", preferredStyle: .Alert)
+            
+            let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                
+                (alert: UIAlertAction!) -> Void in
+                self.navigationController?.popViewControllerAnimated(true)
+            })
+            
+            Alert.addAction(DismissButton)
+            
+            self.presentViewController(Alert, animated: true, completion: nil)
+            return
+        }
+        
         stilizuj()
         
         // pickerData = [[NSArray alloc] initWithObjects:@"Row 1",@"Row 2",@"Row 3",@"Row 4", nil];
         pickerData = ["Beograd, Novi Sad, Nis"]
         
-        let broj:Int = 9
-        prikaziZaGrad(broj)
+        prikaziZaGrad(0)
         
         
         
@@ -93,6 +108,7 @@ class VremeViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         if(gradovi.count==0) {return}
         
         nazivGrada.text = gradovi[broj].naziv
+        if nazivGrada.text == "Belgrade" {nazivGrada.text = "Beograd"}
         opis.text = gradovi[broj].opis
         trenutnaTemp.text = "Temperatura: "+String(gradovi[broj].trenutna)+" C"
         maxim.text = "Maksimalna dnevna temp: "+String(gradovi[broj].maksimalna)+" C"
@@ -103,13 +119,13 @@ class VremeViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         
         if(gradovi[broj].opis.containsString("Kiša")){
-            slika.image = UIImage(named: "rain.png")
+            slika.image = UIImage(named: "ikonice/rain.png")
         }
         if(gradovi[broj].opis==("Vedro")){
-            slika.image = UIImage(named: "sunny.jpg")
+            slika.image = UIImage(named: "ikonice/sunny.jpg")
         }
         if(gradovi[broj].opis==("Oblačno")){
-            slika.image = UIImage(named: "cloudy.ico")
+            slika.image = UIImage(named: "ikonice/cloudy.ico")
         }
     }
 
@@ -134,7 +150,10 @@ class VremeViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return gradovi[row].naziv
     }
-    
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attributedString = NSAttributedString(string: gradovi[row].naziv, attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        return attributedString
+    }
     func nadjiVreme() -> [Grad]{
         
         //bg, subotica, ns, nis, kragujevac,pancevo, zrenjanin,cacak, kraljevo, novi pazar,smederevo,vranje,uzice,valjevo,krusevac,sabac,pozarevac,sombor,pirot,zajecar,kikinda,sremmitr,jagodina,loznica,zlatibor,kopaonik
@@ -165,6 +184,8 @@ class VremeViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             var pritsk = String(Double(round(100*readable["list"][index]["main"]["pressure"].doubleValue)/100)) + " Pa"
             var naziv = String(readable["list"][index]["name"])
 
+            if naziv=="Belgrade" {naziv = "Beograd"}
+            
             var grad = Grad(minimalna: minimalna, maksimalna: maksimalna, trenutna: temperatura, vlaznost: vlazn, vetar: vetr, naziv: naziv, pritisak: pritsk, opis: deskripcija)
             
             //print("Deskripcija: \(deskripcija), temp:\(temperatura)\(minimalna)\(maksimalna),vlaznost:\(vlazn),vetar:\(vetr),prit:\(pritsk),naziv:\(naziv)")
@@ -182,11 +203,10 @@ class VremeViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         if deskripcija.lowercaseString=="moderate rain".lowercaseString {return "Umerena kiša"}
         if deskripcija.lowercaseString=="Sky is Clear".lowercaseString {return "Vedro"}
         if deskripcija.lowercaseString=="clear sky".lowercaseString {return "Vedro"}
-        return "vedro"
+        return "Vedro"
     }
 
 //        {"coord":{"lon":20.47,"lat":44.8},"sys":{"message":0.0308,"country":"RS","sunrise":1470454252,"sunset":1470506219},"weather":[{"id":803,"main":"Clouds","description":"broken clouds","icon":"04n"}],"main":{"temp":24.74,"temp_min":24.737,"temp_max":24.737,"pressure":1020.04,"sea_level":1030.58,"grnd_level":1020.04,"humidity":65},"wind":{"speed":4.76,"deg":271.004},"clouds":{"all":56},"dt":1470510615,"id":792680,"name":"Belgrade"}
-    
     
     
 

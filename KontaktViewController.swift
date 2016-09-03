@@ -60,6 +60,23 @@ class KontaktViewController: UIViewController,CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if SqlKlasa.daLiImaKonekcije() == false {
+            let Alert = UIAlertController(title: "Info", message: "Molimo konektujte se na internet", preferredStyle: .Alert)
+            
+            let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                
+                (alert: UIAlertAction!) -> Void in
+                self.navigationController?.popViewControllerAnimated(true)
+            })
+            
+            Alert.addAction(DismissButton)
+            
+            self.presentViewController(Alert, animated: true, completion: nil)
+            return
+        }
+
+        
         pokreniSvojuPoziciju()
         
         
@@ -80,7 +97,8 @@ class KontaktViewController: UIViewController,CLLocationManagerDelegate {
         marker.map = mapView
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pronadjite nas", style: .Plain, target: self, action: "nadji")
-        self.navigationItem.title = "Lomina 6, 11000 Beograd";
+        self.navigationItem.title = "Lomina 6";
+        self.navigationController!.navigationBar.topItem!.title = "Nazad"
         
     }
     
