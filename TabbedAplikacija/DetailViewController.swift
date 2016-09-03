@@ -10,8 +10,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var nazivVesti: UILabel!
     @IBOutlet weak var skroler: UIScrollView!
+    @IBOutlet weak var datum: UILabel!
     @IBOutlet weak var slika: UIImageView!
+
     @IBOutlet weak var kategorizacija: UILabel!
     @IBOutlet weak var naslov: UILabel!
     @IBOutlet weak var text: UITextView!
@@ -20,7 +23,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Prima : \(vest.slika)")
+        print("Prima : \(vest.kategorija.nazivPodKategorije)")
+        
+        
+        
         
         slika.contentMode = .ScaleAspectFit
         
@@ -33,7 +39,12 @@ class DetailViewController: UIViewController {
                 slika.image = UIImage(data: data)
             }
         }
+        self.nazivVesti.text = vest.naslov
         
+        
+        var datumFinal = vest.datumPostavljanja as NSString
+        datumFinal = datumFinal.substringWithRange(NSRange(location: 8, length: 2))+"."+datumFinal.substringWithRange(NSRange(location: 5, length: 2))+"."+datumFinal.substringWithRange(NSRange(location: 0, length: 4))+"."
+        self.datum.text = datumFinal as String
         
         slika.layer.cornerRadius = 20
         skroler.contentInset = UIEdgeInsetsMake(0, 0, 200, 0)

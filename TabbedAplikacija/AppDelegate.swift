@@ -23,17 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var vesti:[Tabela]=MySqlKlasa.get("Vest",whereUslov:"sport")
         
-        SqlKlasa.ubaciVesti(vesti)
+        //SqlKlasa.ubaciVesti(vesti)
         
+//        let upitObrisi:String = "DELETE FROM `Vest`"
+//        SqlKlasa.izvrsiUpit(upitObrisi)
+
         
         
         var vestttttt = SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija<5")//glavne, idKategorija>4 sport
         
-        
-        
-        
-        print("Velicina:")
-        print(vestttttt.count)
         
         //SqlKlasa.otvoriBazu()
         
@@ -41,8 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //MySqlKlasa.getSesija("Vest")
         
-        SqlKlasa.stampaj()
-
+        
         return true
     }
 

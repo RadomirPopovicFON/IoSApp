@@ -16,6 +16,24 @@ class KomentariTableViewController: UITableViewController,TabelaDelegat {
     override func viewDidLoad() {
         SqlKlasa.vratiMojIPAdresu()
         super.viewDidLoad()
+        self.navigationController!.navigationBar.topItem!.title = "Vest"
+        //self.navigationController!.navigationItem.backBarButtonItem?.title = "Nazad"
+        
+        if SqlKlasa.daLiImaKonekcije() == false {
+            let Alert = UIAlertController(title: "Info", message: "Molimo konektujte se na internet", preferredStyle: .Alert)
+            
+            let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                
+                (alert: UIAlertAction!) -> Void in
+                self.navigationController?.popViewControllerAnimated(true)
+            })
+            
+            Alert.addAction(DismissButton)
+            
+            self.presentViewController(Alert, animated: true, completion: nil)
+            return
+            
+        }
 
         // Uncomment the following line to preserve selection between presentations
         //self.clearsSelectionOnViewWillAppear = false
@@ -73,7 +91,7 @@ class KomentariTableViewController: UITableViewController,TabelaDelegat {
                 
         })
        
-            let Alert = UIAlertController(title: "Info", message: "Uspesno ste dali ocenu na komentar", preferredStyle: .Alert)
+            let Alert = UIAlertController(title: "Info", message: "Uspešno ste dali ocenu na komentar", preferredStyle: .Alert)
             
             let DismissButton = UIAlertAction(title: "Izadji", style: UIAlertActionStyle.Default, handler: {
                 
@@ -87,9 +105,9 @@ class KomentariTableViewController: UITableViewController,TabelaDelegat {
             return true
         }
         else{
-        let Alert = UIAlertController(title: "Info", message: "Vec ste dali ocenu na komentar", preferredStyle: .Alert)
+        let Alert = UIAlertController(title: "Info", message: "Već ste dali ocenu na komentar", preferredStyle: .Alert)
         
-        let DismissButton = UIAlertAction(title: "Izadji", style: UIAlertActionStyle.Default, handler: {
+        let DismissButton = UIAlertAction(title: "Izađi", style: UIAlertActionStyle.Default, handler: {
             
             (alert: UIAlertAction!) -> Void in
             self.navigationController?.popViewControllerAnimated(true)

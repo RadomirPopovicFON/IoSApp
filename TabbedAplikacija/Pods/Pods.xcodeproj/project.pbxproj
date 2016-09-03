@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		142773CD402CF4B767081A448213DFDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		39F4CC243484AB3AB297DA0962D00CE4 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4728B5101ED5362B144AA8066EB2F44 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F89BBE54BB5AECB7A1A61C66BEEBAD1 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC65DCD8CD304D153FCB6F4A2507591 /* SwiftyJSON.swift */; };
+		51813DDC4E9EFFC3E5BB9D155552A390 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4DD6273DF1F3EDCBE5CCD361219A4 /* Session.swift */; };
+		54DA1E3A367F3ADC181CEBFEE345D650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		62E03B8E290A7A17637D9F2D7785497D /* Pods-TabbedAplikacija-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2053268B26AB312A289DCB6241DC58C /* Pods-TabbedAplikacija-dummy.m */; };
+		6AFE6952D5B11DCD6A857015D83C9B0B /* Pods-TabbedAplikacija-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B15BAF85F3A6B41F31890E785960192F /* Pods-TabbedAplikacija-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		718DBCD175CC6F4F2C5A9C1E2DBB0290 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		8F6801C3DB378F953097B32C8E2FC76E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF76C8CA18898976FF4FD6F0FAEF11A /* StringExtension.swift */; };
+		A68269CBFDB9A65A143F660394362650 /* Polyglot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880B7559FDC8E6A08CB29493C84FC496 /* Polyglot-dummy.m */; };
+		BA4F965FC0790BD442A8361F4DABC21F /* Polyglot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D34DC77B763DC4DE4E92EC67B69116 /* Polyglot.swift */; };
+		E5E0D97105E8E37654BB316CEB261B7D /* Polyglot-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 403624883513D2B4A7304A22BBD4D862 /* Polyglot-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1F8A32B19686C688E80480AD54B58E3 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E26357DA3C16C4C9BEDD37B3FA64BCB /* SwiftyJSON-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EAD53C3390ACBB8EF103B1ADB19F5C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CBA6A1A9F8AEEC0EB68373DB53997D2;
+			remoteInfo = Polyglot;
+		};
+		4845031A14FF3E1A5C0CB02050CB0157 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F07A75C07A10C79653F81B5516D8B5E;
+			remoteInfo = SwiftyJSON;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02CB7B460BC4B5FE74A0C1F75BCEB633 /* Pods-TabbedAplikacija-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabbedAplikacija-frameworks.sh"; sourceTree = "<group>"; };
+		0FF578E06E9168F539029CC2E0D9DD8C /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		11161CF5D0004D80D4ADAEBEE948265E /* Polyglot.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Polyglot.modulemap; sourceTree = "<group>"; };
+		1362A942E6824A622BB3FBC600F91AD2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AF315A5B32A4F1B6D36465C35AA795B /* Pods-TabbedAplikacija-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TabbedAplikacija-acknowledgements.plist"; sourceTree = "<group>"; };
+		1DE4F5B9621EBF6C51E2A3517D88532E /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA4B511EC9466E8F0A59341DC37C4FC /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		403624883513D2B4A7304A22BBD4D862 /* Polyglot-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Polyglot-umbrella.h"; sourceTree = "<group>"; };
+		473E2E5E936F56DCF670A3B3D96A282F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Subspecs/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		49B4DD6273DF1F3EDCBE5CCD361219A4 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Polyglot/Session.swift; sourceTree = "<group>"; };
+		4E26357DA3C16C4C9BEDD37B3FA64BCB /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		4EC65DCD8CD304D153FCB6F4A2507591 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		51D34DC77B763DC4DE4E92EC67B69116 /* Polyglot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Polyglot.swift; path = Polyglot/Polyglot.swift; sourceTree = "<group>"; };
+		549C35EA878EE31A9A9E86E6605C5204 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Subspecs/Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		58C9A8ADF00EEA4BB13A713DA19AEDB7 /* Pods_TabbedAplikacija.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TabbedAplikacija.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CEDF118FAA2B7C9AF89122BFDA93435 /* Pods-TabbedAplikacija-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TabbedAplikacija-resources.sh"; sourceTree = "<group>"; };
+		5EBF428D524F03B3ACBE4B05ADE06AC6 /* Pods-TabbedAplikacija.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabbedAplikacija.release.xcconfig"; sourceTree = "<group>"; };
+		65008F130B0A0177193B6039298B6F10 /* Pods-TabbedAplikacija.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TabbedAplikacija.debug.xcconfig"; sourceTree = "<group>"; };
+		671A453492E478133DA30E10704F8D7B /* Polyglot.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Polyglot.xcconfig; sourceTree = "<group>"; };
+		7944D933A10CFE6C29915743D8F2B233 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		826789BA7A1E3C1F71E933F0D2848BC0 /* Polyglot-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Polyglot-prefix.pch"; sourceTree = "<group>"; };
+		880B7559FDC8E6A08CB29493C84FC496 /* Polyglot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Polyglot-dummy.m"; sourceTree = "<group>"; };
+		8AF76C8CA18898976FF4FD6F0FAEF11A /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Polyglot/StringExtension.swift; sourceTree = "<group>"; };
+		91F30E0543BA7F08C89D315310DC0C2E /* Pods-TabbedAplikacija-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TabbedAplikacija-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3D476BBCC454DDB7EAFCB767B395E2D /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Subspecs/Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		A66017B048E695019E40EB9B85AC3354 /* Polyglot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Polyglot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15BAF85F3A6B41F31890E785960192F /* Pods-TabbedAplikacija-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TabbedAplikacija-umbrella.h"; sourceTree = "<group>"; };
+		C79C2576086BC8728A8FBC6DDC6C378E /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D4728B5101ED5362B144AA8066EB2F44 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		D47B108BE69C7C8A3B7909BD0857F52A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D79F4C662E98B32D6AC6BF2052A903F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E40DDD931F62073E6D55A1D2FD9AD120 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		E969BE12A9AB63BE62897C48B2DBC4EF /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		EE9C7021BD62D9B3127D20A11DC28232 /* Pods-TabbedAplikacija.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TabbedAplikacija.modulemap"; sourceTree = "<group>"; };
+		F2053268B26AB312A289DCB6241DC58C /* Pods-TabbedAplikacija-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TabbedAplikacija-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C1172FDBB9FC9F60539A2A266813FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718DBCD175CC6F4F2C5A9C1E2DBB0290 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CB43A3117A5CCEAFB9A427142BE24A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142773CD402CF4B767081A448213DFDB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBD5B706AA7D72B2146AF994016B5C09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54DA1E3A367F3ADC181CEBFEE345D650 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4BD3128FA8CE95EF7D60F2DD6290C257 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				6CDD6D7178045F46B5799658D4D37108 /* Base */,
+				C56A6C594363C789A9403FCF40D70C68 /* Maps */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		6861355D5490740867E7B02B6BC847DA /* Polyglot */ = {
+			isa = PBXGroup;
+			children = (
+				51D34DC77B763DC4DE4E92EC67B69116 /* Polyglot.swift */,
+				49B4DD6273DF1F3EDCBE5CCD361219A4 /* Session.swift */,
+				8AF76C8CA18898976FF4FD6F0FAEF11A /* StringExtension.swift */,
+				FE074B612AFE643DD07F94F68D87EACA /* Support Files */,
+			);
+			path = Polyglot;
+			sourceTree = "<group>";
+		};
+		6CDD6D7178045F46B5799658D4D37108 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				878F32299161C0694C7D303D1C05F054 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		7649B20D9B8D30667F4FC2BA1B763A10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7944D933A10CFE6C29915743D8F2B233 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BF41A8A8EEC7C550F33479568044388 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1362A942E6824A622BB3FBC600F91AD2 /* Info.plist */,
+				E40DDD931F62073E6D55A1D2FD9AD120 /* SwiftyJSON.modulemap */,
+				2DA4B511EC9466E8F0A59341DC37C4FC /* SwiftyJSON.xcconfig */,
+				4E26357DA3C16C4C9BEDD37B3FA64BCB /* SwiftyJSON-dummy.m */,
+				C79C2576086BC8728A8FBC6DDC6C378E /* SwiftyJSON-prefix.pch */,
+				D4728B5101ED5362B144AA8066EB2F44 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B393AEDD45C493B494B408620AFDEDB3 /* Pods */,
+				9886EBF55B3407E329C536321B1F5F01 /* Products */,
+				944706681FD302E65C2DC4318E55F1EC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E8559BB271315E4E3DFCFBB1039BA23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E969BE12A9AB63BE62897C48B2DBC4EF /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		878F32299161C0694C7D303D1C05F054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				473E2E5E936F56DCF670A3B3D96A282F /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		944706681FD302E65C2DC4318E55F1EC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D417802589D47E2ECE923DDBDE3BE816 /* Pods-TabbedAplikacija */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9886EBF55B3407E329C536321B1F5F01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58C9A8ADF00EEA4BB13A713DA19AEDB7 /* Pods_TabbedAplikacija.framework */,
+				A66017B048E695019E40EB9B85AC3354 /* Polyglot.framework */,
+				1DE4F5B9621EBF6C51E2A3517D88532E /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0F640FAA5BEB036DE3AB5784AEAD98C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549C35EA878EE31A9A9E86E6605C5204 /* GoogleMaps.framework */,
+				A3D476BBCC454DDB7EAFCB767B395E2D /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B393AEDD45C493B494B408620AFDEDB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BD3128FA8CE95EF7D60F2DD6290C257 /* GoogleMaps */,
+				CAA347E3B319649F03347551D8F7B0CC /* GooglePlaces */,
+				6861355D5490740867E7B02B6BC847DA /* Polyglot */,
+				BC15672187C910B90F6946137775AC9E /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC15672187C910B90F6946137775AC9E /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				4EC65DCD8CD304D153FCB6F4A2507591 /* SwiftyJSON.swift */,
+				7BF41A8A8EEC7C550F33479568044388 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C56A6C594363C789A9403FCF40D70C68 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				A0F640FAA5BEB036DE3AB5784AEAD98C /* Frameworks */,
+				7E8559BB271315E4E3DFCFBB1039BA23 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		CAA347E3B319649F03347551D8F7B0CC /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				7649B20D9B8D30667F4FC2BA1B763A10 /* Frameworks */,
+				EDC4C315E2AF23C6D188F2A388E83130 /* Resources */,
+			);
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		D417802589D47E2ECE923DDBDE3BE816 /* Pods-TabbedAplikacija */ = {
+			isa = PBXGroup;
+			children = (
+				D79F4C662E98B32D6AC6BF2052A903F5 /* Info.plist */,
+				EE9C7021BD62D9B3127D20A11DC28232 /* Pods-TabbedAplikacija.modulemap */,
+				91F30E0543BA7F08C89D315310DC0C2E /* Pods-TabbedAplikacija-acknowledgements.markdown */,
+				1AF315A5B32A4F1B6D36465C35AA795B /* Pods-TabbedAplikacija-acknowledgements.plist */,
+				F2053268B26AB312A289DCB6241DC58C /* Pods-TabbedAplikacija-dummy.m */,
+				02CB7B460BC4B5FE74A0C1F75BCEB633 /* Pods-TabbedAplikacija-frameworks.sh */,
+				5CEDF118FAA2B7C9AF89122BFDA93435 /* Pods-TabbedAplikacija-resources.sh */,
+				B15BAF85F3A6B41F31890E785960192F /* Pods-TabbedAplikacija-umbrella.h */,
+				65008F130B0A0177193B6039298B6F10 /* Pods-TabbedAplikacija.debug.xcconfig */,
+				5EBF428D524F03B3ACBE4B05ADE06AC6 /* Pods-TabbedAplikacija.release.xcconfig */,
+			);
+			name = "Pods-TabbedAplikacija";
+			path = "Target Support Files/Pods-TabbedAplikacija";
+			sourceTree = "<group>";
+		};
+		EDC4C315E2AF23C6D188F2A388E83130 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FF578E06E9168F539029CC2E0D9DD8C /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FE074B612AFE643DD07F94F68D87EACA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D47B108BE69C7C8A3B7909BD0857F52A /* Info.plist */,
+				11161CF5D0004D80D4ADAEBEE948265E /* Polyglot.modulemap */,
+				671A453492E478133DA30E10704F8D7B /* Polyglot.xcconfig */,
+				880B7559FDC8E6A08CB29493C84FC496 /* Polyglot-dummy.m */,
+				826789BA7A1E3C1F71E933F0D2848BC0 /* Polyglot-prefix.pch */,
+				403624883513D2B4A7304A22BBD4D862 /* Polyglot-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Polyglot";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		446E429AEA82E1CEB997A385AB4149D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AFE6952D5B11DCD6A857015D83C9B0B /* Pods-TabbedAplikacija-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ABC6A2C8CEE83822F4E8761C4B53F33 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E0D97105E8E37654BB316CEB261B7D /* Polyglot-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF096A1EC41ED17638426ADB2F172AB9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39F4CC243484AB3AB297DA0962D00CE4 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4CBA6A1A9F8AEEC0EB68373DB53997D2 /* Polyglot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C0F1A51F564A782BC864B68580DB935 /* Build configuration list for PBXNativeTarget "Polyglot" */;
+			buildPhases = (
+				A1115146BD1D03A4A05735FFA64E16F0 /* Sources */,
+				2C1172FDBB9FC9F60539A2A266813FA8 /* Frameworks */,
+				9ABC6A2C8CEE83822F4E8761C4B53F33 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Polyglot;
+			productName = Polyglot;
+			productReference = A66017B048E695019E40EB9B85AC3354 /* Polyglot.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9F07A75C07A10C79653F81B5516D8B5E /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42D9CDE740AABA196BF38D777C1953F9 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				F80E2174FFDD7BB3686E3A829717B690 /* Sources */,
+				DBD5B706AA7D72B2146AF994016B5C09 /* Frameworks */,
+				FF096A1EC41ED17638426ADB2F172AB9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 1DE4F5B9621EBF6C51E2A3517D88532E /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A55434D124BDBF5A7374CC9B2BABE523 /* Pods-TabbedAplikacija */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 302C6A2F9D661A84A2B9CC0919E1E524 /* Build configuration list for PBXNativeTarget "Pods-TabbedAplikacija" */;
+			buildPhases = (
+				3D55AD1A17FC46418BEEDED2CC90073F /* Sources */,
+				5CB43A3117A5CCEAFB9A427142BE24A7 /* Frameworks */,
+				446E429AEA82E1CEB997A385AB4149D4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2AF41EA0FFF200D0053A06B33DB6723 /* PBXTargetDependency */,
+				F6F6712A238C54524818474E5E302CE2 /* PBXTargetDependency */,
+			);
+			name = "Pods-TabbedAplikacija";
+			productName = "Pods-TabbedAplikacija";
+			productReference = 58C9A8ADF00EEA4BB13A713DA19AEDB7 /* Pods_TabbedAplikacija.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9886EBF55B3407E329C536321B1F5F01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A55434D124BDBF5A7374CC9B2BABE523 /* Pods-TabbedAplikacija */,
+				4CBA6A1A9F8AEEC0EB68373DB53997D2 /* Polyglot */,
+				9F07A75C07A10C79653F81B5516D8B5E /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D55AD1A17FC46418BEEDED2CC90073F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62E03B8E290A7A17637D9F2D7785497D /* Pods-TabbedAplikacija-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1115146BD1D03A4A05735FFA64E16F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68269CBFDB9A65A143F660394362650 /* Polyglot-dummy.m in Sources */,
+				BA4F965FC0790BD442A8361F4DABC21F /* Polyglot.swift in Sources */,
+				51813DDC4E9EFFC3E5BB9D155552A390 /* Session.swift in Sources */,
+				8F6801C3DB378F953097B32C8E2FC76E /* StringExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F80E2174FFDD7BB3686E3A829717B690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F8A32B19686C688E80480AD54B58E3 /* SwiftyJSON-dummy.m in Sources */,
+				4F89BBE54BB5AECB7A1A61C66BEEBAD1 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2AF41EA0FFF200D0053A06B33DB6723 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Polyglot;
+			target = 4CBA6A1A9F8AEEC0EB68373DB53997D2 /* Polyglot */;
+			targetProxy = 2EAD53C3390ACBB8EF103B1ADB19F5C1 /* PBXContainerItemProxy */;
+		};
+		F6F6712A238C54524818474E5E302CE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 9F07A75C07A10C79653F81B5516D8B5E /* SwiftyJSON */;
+			targetProxy = 4845031A14FF3E1A5C0CB02050CB0157 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D0B9630C3F126D1BC7610532185D6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65008F130B0A0177193B6039298B6F10 /* Pods-TabbedAplikacija.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TabbedAplikacija/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TabbedAplikacija/Pods-TabbedAplikacija.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TabbedAplikacija;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		130AA5CFECE3116683C767F66DD38DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EBF428D524F03B3ACBE4B05ADE06AC6 /* Pods-TabbedAplikacija.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TabbedAplikacija/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TabbedAplikacija/Pods-TabbedAplikacija.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TabbedAplikacija;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23A9D7AE722A55BC71CFA00FD186C906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA4B511EC9466E8F0A59341DC37C4FC /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		795E44F6CD4C6AF9F7C5A4764FEADD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671A453492E478133DA30E10704F8D7B /* Polyglot.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Polyglot/Polyglot-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Polyglot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Polyglot/Polyglot.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Polyglot;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		84DA4D316360A397687CC0B68A4C277D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA4B511EC9466E8F0A59341DC37C4FC /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96B64770326258E9606F1384B630A472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671A453492E478133DA30E10704F8D7B /* Polyglot.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Polyglot/Polyglot-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Polyglot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Polyglot/Polyglot.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Polyglot;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		302C6A2F9D661A84A2B9CC0919E1E524 /* Build configuration list for PBXNativeTarget "Pods-TabbedAplikacija" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D0B9630C3F126D1BC7610532185D6E0 /* Debug */,
+				130AA5CFECE3116683C767F66DD38DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42D9CDE740AABA196BF38D777C1953F9 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DA4D316360A397687CC0B68A4C277D /* Debug */,
+				23A9D7AE722A55BC71CFA00FD186C906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C0F1A51F564A782BC864B68580DB935 /* Build configuration list for PBXNativeTarget "Polyglot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				795E44F6CD4C6AF9F7C5A4764FEADD57 /* Debug */,
+				96B64770326258E9606F1384B630A472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

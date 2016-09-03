@@ -14,28 +14,56 @@ class TableViewController: UITableViewController {
     
     @IBOutlet weak var ucitajSl5: UIButton!
     
-    var limitPar = 3;
+    var limitPar = 7;
+    var neUcitavaj : Bool = false
     
     @IBAction func ucitajSl5(sender: AnyObject) {
+        if SqlKlasa.daLiImaKonekcije() == false {
+            let Alert = UIAlertController(title: "Info", message: "Molimo konektujte se na internet", preferredStyle: .Alert)
+            
+            let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                
+                (alert: UIAlertAction!) -> Void in
+                self.navigationController?.popViewControllerAnimated(true)
+            })
+            
+            Alert.addAction(DismissButton)
+            
+            self.presentViewController(Alert, animated: true, completion: nil)
+            return
         
+        }
         
         str = self.restorationIdentifier!
         
         if(str=="sport"){
             // print("velicina je: \(SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idVest = Kategorija.idKategorija",whereUslov: " Vest.idKategorije<5;").count)")
             
-            if(limitPar==MySqlKlasa.get("Vest",whereUslov:"sport").count){
-                return;
+            if(limitPar>=MySqlKlasa.get("Vest",whereUslov:"sport").count){
+                
+                let Alert = UIAlertController(title: "Info", message: "Sve ste ucitali", preferredStyle: .Alert)
+                
+                let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                    
+                    (alert: UIAlertAction!) -> Void in
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+                
+                Alert.addAction(DismissButton)
+                
+                self.presentViewController(Alert, animated: true, completion: nil)
+                return
+
+                
             }
-            limitPar+=1;
+            limitPar+=3;
             
             lista=MySqlKlasa.get("Vest",whereUslov:"sport",limit: String(limitPar))
+            
+            
             if(lista.count==0){
-                lista = SqlKlasa.vratiSve("Vest", whereUslov: "sport")
+                lista = SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija>4")
             }
-            lista = SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija>4")
-            
-            
             
             
             //print("sport")
@@ -43,12 +71,31 @@ class TableViewController: UITableViewController {
         if(str=="vesti"){
             //print("velicina je: \(SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idVest = Kategorija.idKategorija",whereUslov: " Vest.idKategorije<5;").count)")
             
-            if(limitPar==MySqlKlasa.get("Vest",whereUslov:"glavna").count){
+            if(limitPar>=MySqlKlasa.get("Vest",whereUslov:"glavna").count){
+                
+                let Alert = UIAlertController(title: "Info", message: "Sve ste ucitali", preferredStyle: .Alert)
+                
+                let DismissButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                    
+                    (alert: UIAlertAction!) -> Void in
+                    self.navigationController?.popViewControllerAnimated(true)
+                })
+                
+                Alert.addAction(DismissButton)
+                
+                self.presentViewController(Alert, animated: true, completion: nil)
+                return
+
+                
                 return;
             }
-            limitPar+=1;
+            limitPar+=3;
             
             lista=MySqlKlasa.get("Vest",whereUslov:"glavna",limit: String(limitPar))
+            
+            if(lista.count==0){
+                lista = SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija<5")
+            }
             
 //            
 //            lista=SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija<5")
@@ -64,26 +111,74 @@ class TableViewController: UITableViewController {
     var lista:[Tabela] = []
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        
+        
+        if let key = NSUserDefaults.standardUserDefaults().objectForKey("Baza"){
+            if key as! String == "OK" {
+                print("Baza vec postoji")            }
+        }else {SqlKlasa.napraviTabelu(); print("Baza prvi put napravljena!");print("Debug3");}
+        
+        //SqlKlasa.napraviTabelu();
+        
+        
+        SqlKlasa.stampaj()
+        
         str = self.restorationIdentifier!
         
         if(str=="sport"){
            // print("velicina je: \(SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idVest = Kategorija.idKategorija",whereUslov: " Vest.idKategorije<5;").count)")
 
-            lista=MySqlKlasa.get("Vest",whereUslov:"sport",limit: String(limitPar))
+        lista=MySqlKlasa.get("Vest",whereUslov:"sport",limit: String(limitPar))
             
-
-            //print("sport")
+            
+            if lista.count != 0 {
+                
+                var novaLista: [Tabela] = []
+                for index in 0...limitPar-1 {
+                    novaLista.append(lista[index])
+                }
+                
+            SqlKlasa.ubaciVesti(novaLista)
+            }
+            
+            if lista.count == 0 {
+                neUcitavaj = true
+                lista = SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija>4")
+                self.limitPar == lista.count-1
+            }
+           
         }
         if(str=="vesti"){
+            
             //print("velicina je: \(SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idVest = Kategorija.idKategorija",whereUslov: " Vest.idKategorije<5;").count)")
             
-            lista=MySqlKlasa.get("Vest",whereUslov:"glavna")
+            lista=MySqlKlasa.get("Vest",whereUslov:"glavna",limit: String(limitPar))
             
             
-            print("vesti")
+            print("Velicina je: \(lista.count)")
+            
+            if lista.count != 0 {
+                
+                var novaLista: [Tabela] = []
+                for index in 0...limitPar-1 {
+                    novaLista.append(lista[index])
+                }
+                SqlKlasa.ubaciVesti(novaLista)
+            }
+            
+            if lista.count == 0 {
+                neUcitavaj = true
+                
+                lista = SqlKlasa.vratiSve("Vest INNER JOIN Kategorija ON Vest.idKategorije = Kategorija.idKategorija",whereUslov: "Kategorija.idKategorija<5")
+//                print("Broj: \(lista.count)")
+//                self.limitPar = lista.count-1
+//                print("Pre \(limitPar)")
+            }
+            
         }
-
+        
+        
+        super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -106,6 +201,11 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        
+    
+        
+        if SqlKlasa.daLiImaKonekcije() == false {return lista.count}
+        
         return limitPar
     }
 
