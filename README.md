@@ -1,15 +1,21 @@
 # IoSApp
-Potrebno je napraviti IoS mobilnu aplikaciju čija će primarna namena biti isčitavanje vesti. Zbog prirode zahteva, neophodno je napraviti 2 baze, jedna na serveru, sa koje će mobilni uređaji kupiti podatke, druga na samom uređaju. Razlog pravljenja druge jeste  - ukoliko nestane internet konekcije da korisnik ima pristup određenom broju vesti. Lokalna baza će biti napunjena prilikom pokretanja aplikacije kada ona bude imala internet konekciju. 
-	Pored samog učitavanja vesti, postojaće mogućnost davanja komentara na određenu vest, kao i ocenjivanje komentara (lajk/dislajk). Ocena komentara sa jednog uređaja se ne može dva puta dati na istu vest. Svaki komentar imaće određeni broj lajkova/dislajkova. 
-	Aplikacija koristi nekoliko web servisa. Prvi web servis jeste upravo napravljen za korišćenje ove konkretno aplikacije. 
-<br/>
-Primer get zahteva : http://multiplaskleroza.org.rs/selectMobRacunarstvo.php?tabela=Vest&id=sport&limit=3 <br/>
-Pored  ovog get dela, servis ima dve post.php skripte koje kada se pozivaju, kada se ubaci novi komentar/kada se da ocena na neki komentar (insert/ update). Što se javnih servisa tiče, neki od korišćenih aplikacija jesu Facebook Api, Twitter Api, Open Weather Map Api, Google Maps Api, Horoskop Api. Neke od korišćenih biblioteka su : Sqlite, SwiftyJson.  
-Osim dela za vesti, korisnik ima uvid u dnevni horoskop, ima uvid u trenutnu prognozu. Takođe može videti svoju lokaciju na mapi, kako da dođe do konkretne lokacije koja je postavljena kao središte naše institucije. Može postaviti Facebook status, tvit, pozvati nas, poslati nam poruku i poslati mejl (sve u okviru aplikacije). 
+Application description: Primary purpose of the app will be displaying news. 
+Because of the nature of the problem, it is necessary to make 2 databases - one on the server/second one on the phone, where device will get information from server/local database. Why making the second one? If in the moment there is not internet connection, application would need to list some of the previosly loaded news. Local database will be filled with the data whenever the user enters the app while having access to the Internet. (It will be small ammount of the news picked up from the server, just recent ones) 
 
-NAPOMENA : Aplikacija je napravljena i u Swift i u Objective C programskom jeziku
+As a news portal, it has possibility giving a comment about certain news, as well a rating comments (like/dislike). Single device can only give single like/dislike for particular comment. Application uses several web services. Because of the nature, one has been made particulary for taking out news from database and inserting comments/likes or dislikes (PHP scripts) which are GET, POST requests(select, insert and update operations) 
 
-<h3>Screenshotovi aplikacije: </h3>
+<br/>Example : http://multiplaskleroza.org.rs/selectMobRacunarstvo.php?tabela=Vest&id=sport&limit=3<br/>
+
+For the purpose of manipulating the data Sqlite and SwiftyJSON libraries were used.
+
+Also, several public web services were used, such as Open Weather API, Google Maps API, Facebook API, Twitter API, Horoscope API.
+
+User has access to daily horoscope, current temperature. It can see his current location on map, and also how to come to concrete location which is put on the map randomly(Has no meaning, used as parameter for the institution location). 
+
+And lastly, there is possibility to post a Facebook status, Tweet, contact the institution by : call, message.
+Language used for this application: Swift
+
+<h3>Some of the screenshots: </h3>
 
 <img src="1.png" height=300px/>&nbsp;<img src="2.png" height=300px/>&nbsp;<img src="3.png" height=300px/><br/>
 <img src="4.png" height=300px/>&nbsp;<img src="5.png" height=300px/>&nbsp;<img src="6.png" height=300px/><br/>
